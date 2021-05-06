@@ -11,7 +11,7 @@ import java.util.List;
 public class CountryService {
 
     @Autowired
-    public  CountryRepository countryRepository;
+    public CountryRepository countryRepository;
 
     public List<Country> getAll() {
        return countryRepository.findAll();

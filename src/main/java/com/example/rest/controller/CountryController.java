@@ -1,13 +1,9 @@
 package com.example.rest.controller;
 
 import com.example.rest.model.Country;
-import com.example.rest.repository.CountryRepository;
-import java.util.List;
-import java.util.Optional;
-
 import com.example.rest.service.CountryService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
