@@ -1,13 +1,17 @@
 package com.example.rest.model;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "countries")
 public class Country {
 
     @Id
-    private String countryCode;
+    private ObjectId id;
+    @Indexed(unique = true)
+    private String code;
     private String name;
     private String capital;
     private int area;
@@ -17,20 +21,20 @@ public class Country {
         super();
     }
 
-    public Country(String countryCode, String name, String capital, int area, long population) {
-        this.countryCode = countryCode;
+    public Country(String code, String name, String capital, int area, long population) {
+        this.code = code;
         this.name = name;
         this.capital = capital;
         this.area = area;
         this.population = population;
     }
 
-    public String getCountryCode() {
-        return countryCode;
+    public String getCode() {
+        return code;
     }
 
-    public void setCountryCode(String countryCode) {
-        this.countryCode = countryCode;
+    public void setCountryCode(String code) {
+        this.code = code;
     }
 
     public String getName() {
