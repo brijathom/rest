@@ -18,7 +18,7 @@ public class CountryController {
         return countryService.getByCode(code);
     }
 
-    @RequestMapping("/getAll")
+    @RequestMapping("/get-all")
     public List<Country> getAll(){
         return countryService.getAll();
     }
