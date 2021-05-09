@@ -5,6 +5,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+
+// Country objects are stored in the database.
+// The Country class provides a model for the representation of country objects.
 @Document(collection = "countries")
 public class Country {
 

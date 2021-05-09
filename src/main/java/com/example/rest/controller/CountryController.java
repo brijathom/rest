@@ -6,12 +6,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+// The controller controls the way in which users interact with the API.
 @RestController
 public class CountryController {
 
     @Autowired
     public CountryService countryService;
-
 
     @RequestMapping("/get")
     public Country getPerson(@RequestParam String code) {
